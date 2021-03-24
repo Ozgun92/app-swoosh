@@ -131,6 +131,9 @@
                                         <state key="normal" title="MEN'S">
                                             <color key="titleColor" systemColor="systemBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onMensTapped:" destination="Xb8-cR-njY" eventType="touchUpInside" id="1iW-yh-0yf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55f-EN-fU1" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="70" width="414" height="50"/>
@@ -142,6 +145,9 @@
                                         <state key="normal" title="WOMEN'S">
                                             <color key="titleColor" systemColor="systemBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onWomensTapped:" destination="Xb8-cR-njY" eventType="touchUpInside" id="AAn-XG-mqg"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Y6-Jf-dM4" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="140" width="414" height="50"/>
@@ -153,10 +159,13 @@
                                         <state key="normal" title="CO-ED">
                                             <color key="titleColor" systemColor="systemBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCoedTapped:" destination="Xb8-cR-njY" eventType="touchUpInside" id="Fh6-pC-qap"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6a-3X-Shi" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6a-3X-Shi" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="646" width="414" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.39966184100000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -205,6 +214,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Rfq-kh-8ts"/>
                     <connections>
+                        <outlet property="nextBtn" destination="G6a-3X-Shi" id="1kT-Yy-I4r"/>
                         <segue destination="dSb-nA-OY0" kind="show" identifier="skillVCSegue" id="GP5-RB-47K"/>
                     </connections>
                 </viewController>
