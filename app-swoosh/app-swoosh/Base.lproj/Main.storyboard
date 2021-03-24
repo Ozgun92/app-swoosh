@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="16.800000000000001" y="76.011994002998506"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="5RJ-tE-Ok7">
             <objects>
-                <viewController id="Xb8-cR-njY" sceneMemberID="viewController">
+                <viewController id="Xb8-cR-njY" customClass="LeagueVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZJT-BB-1Up">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -167,6 +167,9 @@
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="Xb8-cR-njY" eventType="touchUpInside" id="3qW-94-ScG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NA-6o-vfb">
                                 <rect key="frame" x="0.0" y="10" width="29" height="24"/>
@@ -176,7 +179,7 @@
                                 </constraints>
                                 <state key="normal" image="backButton"/>
                                 <connections>
-                                    <segue destination="TeW-QQ-XOp" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="24u-c2-96N"/>
+                                    <segue destination="TeW-QQ-XOp" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="ntt-ap-3Ab"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -201,22 +204,25 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Rfq-kh-8ts"/>
+                    <connections>
+                        <segue destination="dSb-nA-OY0" kind="show" identifier="skillVCSegue" id="GP5-RB-47K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rtl-P2-GdI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="TeW-QQ-XOp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="784.05797101449286" y="76.630434782608702"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="Ftg-Et-unx">
             <objects>
-                <viewController id="dSb-nA-OY0" sceneMemberID="viewController">
+                <viewController id="dSb-nA-OY0" customClass="SkillVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f6K-yc-SUe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beginnerBallerBG" translatesAutoresizingMaskIntoConstraints="NO" id="zui-8u-uPa">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="di6-D6-jDv">
                                 <rect key="frame" x="0.0" y="20" width="414" height="74"/>
@@ -264,7 +270,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42i-s7-aA2" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="666" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="646" width="414" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.39966184100000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="0mc-mA-PyC"/>
@@ -295,6 +301,7 @@
                             <constraint firstItem="zui-8u-uPa" firstAttribute="trailing" secondItem="jUN-41-bre" secondAttribute="trailing" id="uzu-zC-F46"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Jsj-t6-hXK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CsD-yx-K25" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
